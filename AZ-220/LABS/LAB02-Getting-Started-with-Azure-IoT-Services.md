@@ -14,7 +14,7 @@ The Azure IoT Hub is a fully managed service that enables reliable and secure bi
 Take a look at the different capabilities of the IoT Hub you created, by examining (and understanding) the different items you can find on the different IoT Hub blades, starting with the **IoT Hub Overview blade**.
 ### Exercise 4: Create a Device Provisioning Service using the Azure Portal
 The Azure IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning to the right IoT hub without requiring human intervention. In this exercise you are going to create an instance of the IoT Hub Device Provisioning Service (DPS).
-- Create an instance of DPS in the Azure portal with a unique name and make sure you add it to the Resource Group you created in lab01.
+- Create an instance of DPS in the Azure portal with a unique name (AZ-220-DPS-*your unique identifier*) and make sure you add it to the Resource Group you created in lab01.
 - Link your IoT Hub and Device Provisioning Service, using the **iothubowner** Access Policy.
 ### Exercise 5: Examine the Device Provisioning Service
 Take a look at the different capabilities of the Device Provisioning Service you created, by examining (and understanding) the different items you can find, starting with the **Overview blade**.
