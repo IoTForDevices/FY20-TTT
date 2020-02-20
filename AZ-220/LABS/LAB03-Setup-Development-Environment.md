@@ -15,16 +15,16 @@ In this lab you will:
   - C# for Visual Studio Code (ms-vscode.csharp) by Microsoft
 - Install the [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 - Install the Azure CLI extension for IoT by entering the following command in a command prompt:
-  ``` cmd
+  ```batchfile
   az extension add --name azure-cli-iot-ext
   ```
 - From inside a elevated Windows Powershell command prompt, enter the following command to install the Azure PowerShell:
-  ``` PowerShell
+  ```powershell
   Install-Module -Name AzureRM -AllowClobber
   ```
   You need to make sure that you have at least version 1.1.2.0 of PowerShell in order to use the Azure PowerShell
 - After properly installing the AzureRM module, you need to load the module into your (non elevated) PowerShell session by entering the following command:
-  ``` PowerShell
+  ```powershell
   Import-Module -Name AzureRM
   ```
 #### On Linux
@@ -35,17 +35,16 @@ In this lab you will:
   - C$ for Visual Studio Code (ms-vscode.csharp) by Microsoft
 - Install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
 - Install the Azure CLI extension for IoT by entering the following command in a bash shell:
-  ``` bash
+  ```sh
   az extension add --name azure-cli-iot-ext
   ```
   - Because you are running on a Linux VM, you cannot install the Azure PowerShell, because it depends on Windows Powershell. However, you can still use Azure PowerShell scripts, but you have to make sure to execute them in an [Azure Cloud Shell](https://azure.microsoft.com/en-us/features/cloud-shell/).
 ### Exercise 2: Verify Development Environment Setup
 Depending on the operating system you are using, run the following commands from either a bash shell or a command prompt:
-``` Cmd
+```batchfile
 az --version
 dotnet --version
 ```
 The azure-cli should at least have version 2.0.64, the dotnet core SDK should have version 3.0 or higher.
 
 This concludes LAB03. If you want to have more detailed instructions for the lab (when you are installing on Windows), complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_03-set-up-the-development-environment.md).
-
