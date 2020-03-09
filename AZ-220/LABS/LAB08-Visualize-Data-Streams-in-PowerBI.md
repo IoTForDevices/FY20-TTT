@@ -8,11 +8,11 @@ This lab assumes that you have the following resources available:
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
-IoT Hub | AZ-220-HUB-*your unique identifier*
+IoT Hub | AZ-220-HUB-*{YOUR-ID}*
 A valid Power BI Account, see the [original Lab description](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_08-visualize-data-stream-in-power-bi.md) for instructions to sign up for PowerBI.
 ### Exercise 1: Add an Azure Event Hub Route and an Anomaly Query
 In this exercise, we're going to add a query to the Stream Analytics job, and then use Microsoft Power BI to visualize the output from the query. The query searches for spikes and dips in the vibration data, reporting anomalies. We must create the second route, after first creating an instance of an Event Hubs namespace.
-- Create an Event Hub Resource in a new *Namespace* called **vibrationNamespace-_"your unique identifier"_** in the AZ-220-RG Resource Group. Limit the number of *Throughput units* to **1**.
+- Create an Event Hub Resource in a new *Namespace* called **vibrationNamespace-_"{YOUR-ID}"_** in the AZ-220-RG Resource Group. Limit the number of *Throughput units* to **1**.
 - Create an Event Hub in the just created *Namespace* with the name **vibrationeventhubinstance**.
 - Add a new message route to your IoT Hub to store telemetry messages, name it **vibrationTelemetryRoute** and call the endpoint **vibrationTelemetryEndpoint** and select **Event Hubs** as endpoint type.
 - In the message routing blade, enable the newly created route and set the following query:
@@ -57,5 +57,5 @@ Now let's create a dashboard to visualize the query, using Microsoft Power BI.
 - Add a custom streaming data tile pane (Line chart) for the vibrationDataset, and set the value of the line chart control to **IsSpikeAndDipAnomaly**, and change the Card's title to **Anomalies over the hour**. Make sure to set the Axis to **time** and set the Time window to display to **60 Minutes**.
 > NOTE: Once you are done with this lab, make sure to stop the application and the Stream Analytics Job to limit the Azure Consumption on your subscription.
 
-This concludes LAB08. If you want to have more detailed instructions for the lab (when you are installing on Windows), complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_08-visualize-data-stream-in-power-bi.md).
+This concludes LAB08. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_08-visualize-data-stream-in-power-bi.md).
 

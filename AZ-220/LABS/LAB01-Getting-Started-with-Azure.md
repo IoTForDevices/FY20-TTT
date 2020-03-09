@@ -21,7 +21,13 @@ Simply examine a number of items on the Azure Portal's Toolbar. For instance, tr
 ## Exercise 2: Create an Azure Dashboard and Resource Group
 On the Azure portal, dashboards are used to present a customized view of your resources. Information is displayed through the use of tiles which can be arranged and sized to help you organize your resources in useful ways. You can create many different dashboards that provide different views and serve different purposes.
 
-A resource group is a logical group that contains related resources for a project or application. The resource group can include all the resources for the solution, or only those resources that you want to manage as a group.
+A resource group is a logical group that contains related resources for a project or application.
+
+<details><summary>More about Resource Groups</summary>
+The resource group can include all the resources for the solution, or only those resources that you want to manage as a group.
+</details>
+
+The resource group can include all the resources for the solution, or only those resources that you want to manage as a group.
 ### Task 1: Create a Dashboard
 From inside your Azure portal, create an empty dashboard with the following name: **AZ-220**.
 ### Task 2: Create a Resource Group and add it to your Dashboard

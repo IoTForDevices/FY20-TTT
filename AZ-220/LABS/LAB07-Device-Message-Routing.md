@@ -9,7 +9,7 @@ This lab assumes that you have the following resources available:
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
-IoT Hub | AZ-220-HUB-*your unique identifier*
+IoT Hub | AZ-220-HUB-*{YOUR-ID}*
 ### Exercise 1: Create a new Device Identity and a Simulated Device
 - Inside the Azure Cloud Shell, now create a new Device Identity in your IoT Hub:
   ```sh
@@ -23,7 +23,7 @@ You will now configure a simuated device written in C# to connect to your Azure 
 ### Exercise 2: Create a Message Route to Azure Blob Storage
 The architecture of our vibration monitoring system requires data be sent to two destinations: storage and analysis. Azure IoT Hub provides a great method of directing data to the right service, through *message routing*.
 - Add a new message route to your IoT Hub to store logging messages, name it **vibrationLoggingRoute** and call the endpoint **vibrationLogEndpoint** and select **Pick a container** as storage location.
-  - Create a new *StorageV2 (general purpose V2)* Storage Account in your AZ-220-RG Resource Group with the name **vibrationstore-_"your unique identifier"_**
+  - Create a new *StorageV2 (general purpose V2)* Storage Account in your AZ-220-RG Resource Group with the name **vibrationstore-_"{YOUR-ID}"_**
   - Make sure to set the **Performance** field to *Standard* and the **Replication** filed to *Locally-redundant storage (LRS)*.
   - Create a new container in the storage account you just created with the name **vibrationcontainer**. Make sure that the **Public access level** is set to *Private (no anonymous access)*.
   - In the message routing blade, enable the newly created route and set the following query:
@@ -48,4 +48,4 @@ To verify that the logging route is working as expected, we will create a Stream
 
 > NOTE: Once you are done with this lab, make sure to stop the application and the Stream Analytics Job to limit the Azure Consumption on your subscription.
 
-This concludes LAB07. If you want to have more detailed instructions for the lab (when you are installing on Windows), complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_07-analyze-message-data-in-real-time.md).
+This concludes LAB07. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_07-analyze-message-data-in-real-time.md).

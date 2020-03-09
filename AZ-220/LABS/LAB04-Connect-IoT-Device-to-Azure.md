@@ -8,7 +8,7 @@ This lab assumes that you have the following resources available:
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
-IoT Hub | AZ-220-HUB-*your unique identifier*
+IoT Hub | AZ-220-HUB-*{YOUR-ID}*
 ### Exercise 1: Create an Azure IoT Hub Device ID using Azure CLI
 The Azure CLI modules include several commands for managing IoT Devices within Azure IoT Hub under the `az iot hub device-identity` command group. These commands can be used to manage IoT Devices within scripts or directly from the command-line / terminal.
 - Inside an Azure Cloud Shell, make sure you have the latest IoT Extension installed:
@@ -31,4 +31,4 @@ The Azure CLI modules include several commands for managing IoT Devices within A
     ```sh
     az iot hub monitor-events --hub-name {IoTHubName} --device-id SimuatedDevice1
     ```
-This concludes LAB04. If you want to have more detailed instructions for the lab (when you are installing on Windows), complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_04-connect-iot-device-to-azure.md).
+This concludes LAB04. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_04-connect-iot-device-to-azure.md).

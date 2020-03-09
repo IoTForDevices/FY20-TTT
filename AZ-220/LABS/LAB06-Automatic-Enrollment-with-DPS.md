@@ -8,8 +8,8 @@ This lab assumes that you have the following resources available:
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
-IoT Hub | AZ-220-HUB-*your unique identifier*
-Device Provisioning Service | AZ-220-DPS-*your unique identifier*
+IoT Hub | AZ-220-HUB-*{YOUR-ID}*
+Device Provisioning Service | AZ-220-DPS-*{YOUR-ID}*
 ### Exercise 1: Generate and Configure X.509 CA Certificates using OpenSSL
 In this exercise, you will generate an X.509 CA Certificate using OpenSSL within the Azure Cloud Shell. This certificate will be used to configure the Group Enrollment within DPS.
 - Execute the script `prep-gen-x509-certs.h` that can be found in the [scripts folder](./LABS/06-Automatic-Enrollment-with-DPS/Scripts) in this repository, by uploading it to an Azure Cloud Shell and executing it there.
@@ -67,5 +67,5 @@ Now you will perform the necessary tasks to retire the enrollment group and its 
 > NOTE: If you delete an enrollment group for a certificate, devices that have the certificate in their certificate chain might still be able to enroll if a different, enabled enrollment group still exists for the root certificate or another intermediate certificate higher up in their certificate chain.
 - Retire the device from your IoT Hub, by deleting it from the list of devices.
 - Verify the retirement by again run the Simulated Device. This time it should thrown an exception.
-This concludes LAB06. If you want to have more detailed instructions for the lab (when you are installing on Windows), complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_06-automatic-enrollment-of-devices-in-dps.md).
+This concludes LAB06. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_06-automatic-enrollment-of-devices-in-dps.md).
 

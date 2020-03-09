@@ -10,8 +10,8 @@ This lab assumes that you have the following resources available:
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
-IoT Hub | AZ-220-HUB-*your unique identifier*
-Device Provisioning Service | AZ-220-DPS-*your unique identifier*
+IoT Hub | AZ-220-HUB-*{YOUR-ID}*
+Device Provisioning Service | AZ-220-DPS-*{YOUR-ID}*
 ### Exercise 1: Create a new individual enrollment in DPS
 In this exercise, you will create a new individual enrollment for a device within the Device Provisioning Service (DPS) using *symmetric key attestation*. 
 - Go to your Device Provisioning Service and find **Add individual enrollment**.
@@ -40,4 +40,4 @@ az iot hub monitor-events --hub-name {IoTHubName} --device-id DPSSimuatedDevice1
 Now you will perform the necessary tasks to retire the device from both the Device Provisioning Service (DPS) and Azure IoT Hub. To fully retire an IoT Device from an Azure IoT solution it must be removed from both of these services.
 - Delete the `DPSSimulatedDevice1` from DPS
 - Retire the device from your IoT Hub.
-This concludes LAB05. If you want to have more detailed instructions for the lab (when you are installing on Windows), complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_05-individual-enrollment-of-device-in-dps.md).
+This concludes LAB05. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_05-individual-enrollment-of-device-in-dps.md).
