@@ -1,7 +1,10 @@
 # Integrate IoT Hub with Event Grid
 Contoso is installing new connected Thermostats to be able to monitor temperature across different cheese caves. You will create an alert to notify facilities manager when a new thermostat has been created.
 <details><summary>More about alerts</summary>
-To create an alert, you will use the Event Grid Service when a new thermostat is created in IoT Hub. You will use a Logic Apps instance that reacts on creating new devices (through Event Grid Service events) by sending an email to alert a facilities manager each time a new device has been created, sharing the device ID and connection state.</details>
+
+To create an alert, you will use the Event Grid Service when a new thermostat is created in IoT Hub. You will use a Logic Apps instance that reacts on creating new devices (through Event Grid Service events) by sending an email to alert a facilities manager each time a new device has been created, sharing the device ID and connection state.
+
+</details>
 
 ## In this lab
 In this lab, you will learn to create a Logic App that sends an email, configure Azure IoT Hub Event Subscriptions and create devices that will trigger the Logic App to send emails.
