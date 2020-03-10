@@ -2,12 +2,15 @@
 ## Lab Scenario
 As one of the developers at Contoso, setting up your development environment is an important step before starting to build in IoT solution. You need to prepare a work environment that you can use to develop your IoT solution, both on the Azure cloud side and for your local work environment. Your team has decided to use Visual Studio Code as the primary coding tool for device management.
 > NOTE: If you checked the [pre-requisites](../README.md) for AZ220 and already have the tools installed, you can skip Lab03.
+
 ## In this lab
 In this lab you will:
 - Install the .NET Core 3 SDK, Azure CLI, and the Visual Studio Code (VSCode) editor.
 - Install the VSCode extensions for developing Azure IoT solutions.
 - Verify your Development Environment setup
-### Exercise 1: Install Developer Tools and Products
+
+### **Exercise 1: Install Developer Tools and Products**
+
 #### On Windows
 - Install the .NET Core SDK using the [Windows Installer](https://dotnet.microsoft.com/download).
 - Install [Visual Studio Code](https://code.visualstudio.com/Download), together with the following extensions:
@@ -39,7 +42,8 @@ In this lab you will:
   az extension add --name azure-cli-iot-ext
   ```
   - Because you are running on a Linux VM, you cannot install the Azure PowerShell, because it depends on Windows Powershell. However, you can still use Azure PowerShell scripts, but you have to make sure to execute them in an [Azure Cloud Shell](https://azure.microsoft.com/en-us/features/cloud-shell/).
-### Exercise 2: Verify Development Environment Setup
+
+### **Exercise 2: Verify Development Environment Setup**
 Depending on the operating system you are using, run the following commands from either a bash shell or a command prompt:
 ```batchfile
 az --version

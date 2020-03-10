@@ -5,12 +5,15 @@ The second route will be to an Event Hub, because an Event Hub is a convenient i
 In this lab, you will learn to create a message route to an event hub, pass telemetry data to an Azure Analytics job to detect anomalies and present the results in a PowerBI dashboard. The lab is a continuation of Lab7. It uses the same simulated device (that you can find under LabFiles/07-Device-Message-Routing)
 ## Prerequisites
 This lab assumes that you have the following resources available:
+
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
 IoT Hub | AZ-220-HUB-*{YOUR-ID}*
+
 A valid Power BI Account, see the [original Lab description](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_08-visualize-data-stream-in-power-bi.md) for instructions to sign up for PowerBI.
-### Exercise 1: Add an Azure Event Hub Route and an Anomaly Query
+
+### **Exercise 1: Add an Azure Event Hub Route and an Anomaly Query**
 In this exercise, we're going to add a query to the Stream Analytics job, and then use Microsoft Power BI to visualize the output from the query. The query searches for spikes and dips in the vibration data, reporting anomalies. We must create the second route, after first creating an instance of an Event Hubs namespace.
 - Create an Event Hub Resource in a new *Namespace* called **vibrationNamespace-_"{YOUR-ID}"_** in the AZ-220-RG Resource Group. Limit the number of *Throughput units* to **1**.
 - Create an Event Hub in the just created *Namespace* with the name **vibrationeventhubinstance**.
@@ -20,7 +23,8 @@ In this exercise, we're going to add a query to the Stream Analytics job, and th
 sensorID = "VSTel"
 ```
 Make sure to start the simulated device from Lab07.
-### Exercise 2: Add Telemetry Route
+
+### **Exercise 2: Add Telemetry Route**
 With this new IoT Hub route in place, we need to update our Stream Analytics job to handle the telemetry stream.
 - In the Stream Analysis Job you created in Lab07, add an additional input stream, taking data from your just created Event Hub with the *input alias* set to **vibrationEventInput**.
 - Also create an additional output connection to PowerBI with the *output alias* set to **vibrationBI**.
@@ -47,7 +51,8 @@ With this new IoT Hub route in place, we need to update our Stream Analytics job
     FROM AnomalyDetectionStep
   ```
 Make sure to start the Stream Analysis Job.
-### Create a PowerBI Dashboard
+
+### **Create a PowerBI Dashboard**
 Now let's create a dashboard to visualize the query, using Microsoft Power BI.
 - Navigate to https://app.powerbi.com/
 - Check if the **vibrationDataset** is available and create a Dashboard with the name **Vibration Dash**.

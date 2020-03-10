@@ -6,21 +6,24 @@ Message routing enables you to send messages from your devices to cloud services
 In this lab, you will learn to create a message route to blob storage and create another message route to an Azure Analytics job.
 ## Prerequisites
 This lab assumes that you have the following resources available:
+
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
 IoT Hub | AZ-220-HUB-*{YOUR-ID}*
-### Exercise 1: Create a new Device Identity and a Simulated Device
+
+### **Exercise 1: Create a new Device Identity and a Simulated Device**
 - Inside the Azure Cloud Shell, now create a new Device Identity in your IoT Hub:
   ```sh
   az iot hub device-identity create --hub-name {IoTHubName} --device-id VibrationSensorId
   az iot hub device-identity show-connection-string --hub-name {IoTHubName} --device-id VibrationSensorId --output table
   ``` 
 You will now configure a simuated device written in C# to connect to your Azure IoT Hub using the Device ID and Shared Access Key created in exercise 1.
-  - Using Visual Studio Code, open the /LabFiles folder and the Program.cs file.
+  - Using Visual Studio Code, in the /LabFiles folder for this lab, open the Program.cs file.
   - Add your connection string to the Program.cs file
   - Run the simulated device from within the Visual Studio Code terminal
-### Exercise 2: Create a Message Route to Azure Blob Storage
+
+### **Exercise 2: Create a Message Route to Azure Blob Storage**
 The architecture of our vibration monitoring system requires data be sent to two destinations: storage and analysis. Azure IoT Hub provides a great method of directing data to the right service, through *message routing*.
 - Add a new message route to your IoT Hub to store logging messages, name it **vibrationLoggingRoute** and call the endpoint **vibrationLogEndpoint** and select **Pick a container** as storage location.
   - Create a new *StorageV2 (general purpose V2)* Storage Account in your AZ-220-RG Resource Group with the name **vibrationstore-_"{YOUR-ID}"_**
@@ -30,7 +33,7 @@ The architecture of our vibration monitoring system requires data be sent to two
     ```sql
     sensorID = "VSLog"
     ```
-### Exercise 3: Logging Route verifcation with Azure Stream Analytics
+### **Exercise 3: Logging Route verifcation with Azure Stream Analytics**
 To verify that the logging route is working as expected, we will create a Stream Analytics job that routes logging messages to Blob storage, which can then be validated using Storage Explorer in the Azure Portal.
 > NOTE: It may seem odd to be routing data to storage, then again sending it to storage through Azure Stream Analytics. In a production scenario, you wouldn't have both paths long-term. Instead, the second path that we're creating here would not exist. We're using it here simply as a way to demonstrate Azure Stream Analytics in an easy-to-validate way in a lab environment.
 - Create a Stream Analytics Job with the name **vibrationJob**, and with the *Streaming Units* set to **1**.

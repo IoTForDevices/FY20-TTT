@@ -12,10 +12,12 @@ In this lab, you will learn to create a Logic App that sends an email, configure
 ![ScreenShot](../Images/09-Architecture.jpg)
 ## Prerequisites
 This lab assumes that you have the following resources available:
+
 Resource Type | Resource Name
 --------------|--------------
 Resource Group | AZ-220-RG
 IoT Hub | AZ-220-HUB-*{YOUR-ID}*
+
 ### **Exercise 1: Create a HTTP Web Hook Logic App that sends an email**
 In this exercise you will create a new [Azure Logig App](https://azure.microsoft.com/en-us/services/logic-apps/) that will be triggered via a HTTP Web Hook, each time an IoT Hub sends an event to the Event Grid Service when a new particular device is created. The Azure Logic App will send an email to an Outlook.com email address when it is triggered.
 - Create a new Logic App in your Resource Group and give it a unique name (for instance **AZ-220-LogicApp-CP-_"{YOUR-ID}"_**)
@@ -27,6 +29,7 @@ In this exercise you will create a new [Azure Logig App](https://azure.microsoft
   `This is an automated email to inform you that: {eventType} occurred at {eventTime} for IoT Hub: {hubName} with Device ID: {deviceID} and Connection state: {connectionState}.`
 - Save the changes in the Logic App Workflow.
 - Save the **HTTP POST URL** that is displayed, Event Grid will use this URL to trigger the execution of the Logic App Workflow.
+
 ### **Exercise 2: Configure the Azure IoT Hub Event Subscription**
 Azure IoT Hub integrates with Azure Event Grid so that you can send event notifications to other services and trigger downstream processes. You can configure business applications to listen for IoT Hub events so that you can react to critical events in a reliable, scalable, and secure manner.
 
@@ -35,6 +38,7 @@ In this exercise, you will create an Event Subscription within Azure IoT Hub to 
 - Filter out all events except for **Device Created**.
 - Select the **Web Hook** Endpoint Type and paste the **HTTP POST URL** under **Subscriber Endpoint**.
 - Prior to creating the event subscription, add filters for devices that begin with `devices/CheeseCave1_` and that end with `_Thermostat`.
+
 ### **Exercise 3: Test your Logic App by creating New Devices in your IoT Hub**
 - Create the following devices from the IoT Hub explorer:
   - CheeseCave1_Building1_Light
