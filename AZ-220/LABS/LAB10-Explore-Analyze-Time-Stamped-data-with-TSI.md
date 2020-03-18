@@ -46,4 +46,4 @@ In this exercise, you will run the simulated devices so they start sending telem
 
 Once you have completed exploring the data, don't forget to stop the device simulator app by pressing **CRTL C** in the terminal.
 
-This concludes LAB10. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/IoTForDevices/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_10-analyze-time-stamped-data-with-time-series-insights.md).
+This concludes LAB10. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_10-analyze-time-stamped-data-with-time-series-insights.md).
