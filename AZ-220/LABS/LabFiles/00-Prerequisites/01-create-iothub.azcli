@@ -1,0 +1,40 @@
+#!/bin/bash
+# Script to create an Azure IoT Hub in the specified Azure Resource Group.
+# Pre-requisites: az login has already been executed with a valid Azure subscription
+RED='\033[0;31m'
+RESET='\033[0m'
+
+# Set Environment Variables (default names) for the Resource Group, Location and the Virtual Dev Machine Name
+AZ_RG="TMP-AZ-220-RG"
+AZ_HUB_NAME="AZ-220-HUB"
+AZ_LOC="westeurope"
+
+# Check if the user wants to override one or more of the default values
+OPTS=`getopt -n 'parse-options' -o i:l: --long initials:,location: -- "$@"`
+eval set -- "$OPTS"
+
+#extract options and their arguments into variables
+while true ; do
+        case "$1" in
+                -i | --initials ) INITIALS="$2"; shift 2 ;;
+                -l | --location ) AZ_LOC="$2"; shift 2 ;;
+                --) shift; break ;;
+                *) break;;
+        esac
+done
+
+if [ -z $INITIALS ]
+then
+    echo -e "usage: ./01-create-iothub.azcli ${RED}-i <initials>${RESET} [-l <location>]"
+    exit 1
+fi
+
+IoTHubName=$AZ_HUB_NAME-$INITIALS
+Location=$AZ_LOC
+RGName=$AZ_RG
+
+# create resource group
+az group create --name $RGName --location $Location
+
+# create IoT Hub
+az iot hub create --name $IoTHubName -g $RGName --sku S1

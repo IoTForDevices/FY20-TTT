@@ -1,0 +1,11 @@
+#!/bin/bash
+# Script to delete the specified Azure Resource Group and all of its resources.
+# Pre-requisites: az login has already been executed with a valid Azure subscription
+
+# Set Environment Variables (default names) for the Resource Group, Location and the Virtual Dev Machine Name
+AZ_RG="TMP-AZ-220-RG"
+
+RGName=$AZ_RG
+
+# create resource group
+az group delete --name $RGName
