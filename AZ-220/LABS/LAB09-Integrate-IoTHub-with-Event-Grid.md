@@ -9,7 +9,8 @@ To create an alert, you will use the Event Grid Service when a new thermostat is
 ## In this lab
 In this lab, you will learn to create a Logic App that sends an email, configure Azure IoT Hub Event Subscriptions and create devices that will trigger the Logic App to send emails.
 
-![ScreenShot](../Images/09-Architecture.jpg)
+<img src="../Images/09-Architecture.png" width="75%">
+
 ## Prerequisites
 This lab assumes that you have the following resources available:
 
