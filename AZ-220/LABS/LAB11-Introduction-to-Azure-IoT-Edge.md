@@ -6,7 +6,7 @@ You will be setting up a new IoT Edge device that can monitor temperature of one
 ## In this lab
 In this lab, you will deploy Azure IoT Edge to a Linux VM, connect it to an IoT Hub, add functionality to the Edge Device and add Azure Stream Analytics to the Edge Device.
 
-![ScreenShot](../Images/11-Architecture.jpg)
+![ScreenShot](../Images/11-Architecture.png)
 
 
 ## Prerequisites

@@ -6,7 +6,7 @@ You will add Time Series Insights to the solution to quickly store, visualize, a
 ## In this lab
 In this lab, you will learn to create an Azure Time Series Insights (TSI) environment, connect an IoT Hub with TSI and to view TSI data with TSI Explorer.
 
-![ScreenShot](../Images/10-Architecture.jpg)
+![ScreenShot](../Images/10-Architecture.png)
 
 ## Prerequisites
 This lab assumes that you have the following resources available:
