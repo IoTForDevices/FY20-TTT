@@ -1,4 +1,4 @@
-# Visualize a Data Stream in PowerBI
+# LAB08 - Visualize a Data Stream in PowerBI
 You have developed a device simulator that generates vibration data and other telemetry outputs for a conveyor belt system that takes packages and drops them off in mailing bins. You have built and tested a logging route that sends dat to Azure Blob storage.
 The second route will be to an Event Hub, because an Event Hub is a convenient input to Stream Analytics. And Stream Analytics is a convenient way of handling anomaly detection, like the excessive vibration we're looking for in our scenario.
 ## In this lab

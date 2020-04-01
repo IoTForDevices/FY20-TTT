@@ -1,4 +1,4 @@
-# Integrate IoT Hub with Event Grid
+# LAB09 - Integrate IoT Hub with Event Grid
 Contoso is installing new connected Thermostats to be able to monitor temperature across different cheese caves. You will create an alert to notify facilities manager when a new thermostat has been created.
 <details><summary>More about alerts</summary>
 

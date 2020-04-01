@@ -1,4 +1,4 @@
-# Device Message Routing
+# LAB07 - Device Message Routing
 Message routing enables you to send messages from your devices to cloud services in an automated, scalable, and reliable manner. Message routing can be used for:
 - Sending device telemetry messages as well as events namely, device lifecycle events, and device twin change events to built-in-endpoint and custom endpoints.
 - Filtering data before routing it to various endpoints by applying rich queries. Message routing allows you to query on the message properties and message body as well as device twin tags and device twin properties.

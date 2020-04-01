@@ -1,4 +1,4 @@
-# Getting started with Azure IoT Services
+# LAB02 - Getting started with Azure IoT Services
 
 ## Lab Scenario
 As an Azure IoT Developer for a leading gourmet cheese company named Contoso, you are tasked to start exploring Azure IoT services needed for connecting future devices.

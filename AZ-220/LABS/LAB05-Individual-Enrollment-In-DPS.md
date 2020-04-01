@@ -1,4 +1,4 @@
-# Individual Enrollment of a Device in DPS
+# LAB05 - Individual Enrollment of a Device in DPS
 ## Lab Scenario
 Contoso's Asset Monitoring and Tracking Solution will require an IoT Device that has sensors for tracking location, temperature, pressure to be added in product transport boxes.
 

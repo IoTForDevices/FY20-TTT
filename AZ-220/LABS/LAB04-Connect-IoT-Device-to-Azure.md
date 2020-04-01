@@ -1,4 +1,4 @@
-# Connect an IoT Device to Azure
+# LAB04 - Connect an IoT Device to Azure
 ## Lab Scenario
 Contoso is known for producing high quality cheeses. Due to the company's rapid growth in both popularity and sales, they want to take steps to ensure that their cheeses stay at the same high level of quality that their customers expect. Therefor they have decided to launch an automated system that uses IoT devices to monitor temperature and humidity. The rate at which telemetry data is communicated will be adjustable to help ensure that their manufacturing process is under control as batches of cheese proceed through environmentally sensitive processes.
 

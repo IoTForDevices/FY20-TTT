@@ -1,4 +1,4 @@
-# Automatically provision IoT devices securely and at scale with DPS
+# LAB06 - Automatically provision IoT devices securely and at scale with DPS
 ## Lab Scenario
 Our asset tracking solution is getting bigger, and provisioning devices one by one does not scale. We want to use Device Provisioning Service (DPS) to enroll many devices automatically and securely using X.509 certificate authentication.
 ## In this lab
