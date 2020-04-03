@@ -111,4 +111,4 @@ Now that the temperature sensor module is deployed you can add a Stream Analytic
   iotedge logs tempsensor
   ```
 
-  This concludes LAB11. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_11-introduction-to-azure-iot-edge.md).
+This concludes LAB11. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_11-introduction-to-azure-iot-edge.md).

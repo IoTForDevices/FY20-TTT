@@ -112,3 +112,6 @@ In this exercise, you will use the Azure CLI to monitor the events being sent to
 - Start an Azure Cloud Shell from the Azure Portal and monitor events for your Event Hub.
 - When everything is working correctly, you will see output from the downstream device, which is send through unmodified by the Azure IoT Edge Gateway VM.
 - Exit the console application and optionally clean up your resources to limit consuming Azure services.
+
+This concludes LAB12. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_12-setup-an-iot-edge-gateway.md).
+
