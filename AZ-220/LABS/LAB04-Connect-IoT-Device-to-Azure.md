@@ -5,6 +5,8 @@ Contoso is known for producing high quality cheeses. Due to the company's rapid 
 ## In this lab
 In this lab, you will learn how to register, configure and run a simulated device to send Device-to-Cloud telemetry messages.
 
+![ScreenShot](../Images/04-Architecture.png)
+
 ## Prerequisites
 This lab assumes that you have the following resources available:
 

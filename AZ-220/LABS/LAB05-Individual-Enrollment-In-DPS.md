@@ -5,6 +5,19 @@ Contoso's Asset Monitoring and Tracking Solution will require an IoT Device that
 When a new box enters the system, it is equipped with the new IoT Device. The device needs to be auto-provisioned to IoT Hub using Device Provisioning Service. When an existing device needs to be removed (for instance when the device retires), it also needs to be "decommissioned" through DPS.
 ## In this lab
 In this lab, you will, create an individual enrollment within Azure Device Provisioning Service (DPS) to automatically connect a pre-built simulated device to Azure IoT Hub. You will also fully retire the device by removing it from both DPS and IoT Hub.
+
+![ScreenShot](../Images/05-Architecture.png)
+
+<details><summary>More about DPS</summary>
+
+Provisioning represents the step of the device life cycle when a device is to be made known to the system. 
+
+DPS is a global provisioning service that supports registration and configuration (i.e. bootstrapping) of devices across multiple IoT Hubs.
+DPS simplifies the automation of device provisioning into the device identity store (part of IoT Hub), while providing
+flexibility to control the distribution of devices.
+
+</details>
+
 ## Prerequisites
 This lab assumes that you have the following resources available:
 

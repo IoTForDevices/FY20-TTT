@@ -97,4 +97,4 @@ After succesfully debugging your custom IoT Edge Module, you can now publish it 
   | ObjectCountingModuleToIoTHub | ``` FROM /messages/modules/objectcountingmodule/outputs/* INTO $upstream``` |
 - At the bottom of the blad, click **Next: Review + Create**.
 
-This completes the development of the ```objectcountingmodule``` custom Azrue IoT Edge Module. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_13-deploy-and-debug-custom-azure-iot-edge-module.md). 
+This concludes LAB13. If you want to have more detailed instructions for the lab, complete step-by-step instructions are [available here](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer/blob/master/Instructions/Labs/LAB_AK_13-deploy-and-debug-custom-azure-iot-edge-module.md). 

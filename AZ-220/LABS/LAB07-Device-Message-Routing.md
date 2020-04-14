@@ -4,6 +4,9 @@ Message routing enables you to send messages from your devices to cloud services
 - Filtering data before routing it to various endpoints by applying rich queries. Message routing allows you to query on the message properties and message body as well as device twin tags and device twin properties.
 ## In this lab
 In this lab, you will learn to create a message route to blob storage and create another message route to an Azure Analytics job.
+
+![ScreenShot](../Images/07-Architecture.png)
+
 ## Prerequisites
 This lab assumes that you have the following resources available:
 

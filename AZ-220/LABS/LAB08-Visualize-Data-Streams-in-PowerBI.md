@@ -1,8 +1,13 @@
 # LAB08 - Visualize a Data Stream in PowerBI
-You have developed a device simulator that generates vibration data and other telemetry outputs for a conveyor belt system that takes packages and drops them off in mailing bins. You have built and tested a logging route that sends dat to Azure Blob storage.
+In LAB07, you have developed a device simulator that generates vibration data and other telemetry outputs for a conveyor belt system that takes packages and drops them off in mailing bins. You have built and tested a logging route that sends dat to Azure Blob storage.
 The second route will be to an Event Hub, because an Event Hub is a convenient input to Stream Analytics. And Stream Analytics is a convenient way of handling anomaly detection, like the excessive vibration we're looking for in our scenario.
 ## In this lab
 In this lab, you will learn to create a message route to an event hub, pass telemetry data to an Azure Analytics job to detect anomalies and present the results in a PowerBI dashboard. The lab is a continuation of Lab7. It uses the same simulated device (that you can find under LabFiles/07-Device-Message-Routing)
+
+![ScreenShot](../Images/08-Architecture.png)
+
+> NOTE: The architecture looks a bit more complex and is really intended for usage in this lab. Typically, you wouldn't use Azure Stream Analytics to store the same data to a BLOB as you do through IoT Hub Message Routing. Also, using the same telemetry data as input twice on the same Azure Stream Analytics service is ok for ths lab exercise but typically something you wouldn't do in a real solution.
+
 ## Prerequisites
 This lab assumes that you have the following resources available:
 

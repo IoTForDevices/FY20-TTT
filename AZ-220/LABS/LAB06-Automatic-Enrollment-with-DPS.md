@@ -3,6 +3,9 @@
 Our asset tracking solution is getting bigger, and provisioning devices one by one does not scale. We want to use Device Provisioning Service (DPS) to enroll many devices automatically and securely using X.509 certificate authentication.
 ## In this lab
 In this lab, you will setup a *group enrollment* within DPS using a CA X.509 certificate. You will also configure a simulated IoT device that will authenticate with DPS using a device certificate signed by the CA Certificate.
+
+![ScreenShot](../Images/06-Architecture.png)
+
 ## Prerequisites
 This lab assumes that you have the following resources available:
 
@@ -14,7 +17,7 @@ Device Provisioning Service | AZ-220-DPS-*{YOUR-ID}*
 
 ### **Exercise 1: Generate and Configure X.509 CA Certificates using OpenSSL**
 In this exercise, you will generate an X.509 CA Certificate using OpenSSL within the Azure Cloud Shell. This certificate will be used to configure the Group Enrollment within DPS.
-- Execute the script `prep-gen-x509-certs.h` that can be found in the [scripts folder](./LABS/06-Automatic-Enrollment-with-DPS/Scripts) in this repository, by uploading it to an Azure Cloud Shell and executing it there.
+- Execute the script `generate-x509-cert.sh` that can be found in the [scripts folder](./LABS/06-Automatic-Enrollment-with-DPS/Scripts) in this repository, by uploading it to an Azure Cloud Shell and executing it there.
 - Run the following command inside the ~/certificates directory of the Azure Cloud Shell to generate the CA and intermediate certificates and download the root certificate to your local machine:
   ```sh
   ./certGen.sh create_root_and_intermediate
