@@ -1,0 +1,43 @@
+#!/bin/bash
+# Script to create a Device Identity for a device that will act as an Azure IoT Edge leaf device
+# Pre-requisites: az login has already been executed with a valid Azure subscription
+RED='\e[0;31m'
+GREEN='\e[0;32m'
+RESET='\e[0m'
+
+# Set Environment Variables (default names) for the Resource Group, Location and Azure IoT Hub
+AZ_RG="TMP-AZ-220-RG"
+AZ_HUB_NAME="AZ-220-HUB"
+AZ_LOC="westeurope"
+DEVICE_IDENTITY="SimulatedThermostat"
+
+# Check if the user wants to override one or more of the default values
+OPTS=`getopt -n 'parse-options' -o b:hi:l:n:r: --long base-hubname:,help,initials:,location:,name:,resource: -- "$@"`
+eval set -- "$OPTS"
+
+#extract options and their arguments into variables
+while true ; do
+        case "$1" in
+                -b | --base-hubname ) AZ_HUB_NAME="$2"; shift 2 ;;
+                -h | --help         ) break;;
+                -i | --initials     ) INITIALS="$2"; shift 2 ;;
+                -l | --location     ) AZ_LOC="$2"; shift 2 ;;
+                -n | --name         ) DEVICE_IDENTITY="$2"; shift 2 ;;
+                -r | --resource     ) AZ_RG="$2"; shift 2 ;;
+                --                  ) shift; break ;;
+                *                   ) break;;
+        esac
+done
+
+if [ -z $INITIALS ]
+then
+    echo -e "usage: ./01-create-device-identity.azcli ${RED}-i <initials>${RESET} [-b <basic IoT Hub Name>] [-l <location>] [-n <device identity>] [-r <resource group>]"
+    exit 1
+fi
+
+IoTHubName=$AZ_HUB_NAME-$INITIALS
+Location=$AZ_LOC
+RGName=$AZ_RG
+
+../00-Prerequisites/01-create-iothub.azcli -i $INITIALS -l $Location -b $AZ_HUB_NAME -r $AZ_RG  
+

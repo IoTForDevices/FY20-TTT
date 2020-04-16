@@ -2,10 +2,32 @@
 # Script to delete the specified Azure Resource Group and all of its resources.
 # Pre-requisites: az login has already been executed with a valid Azure subscription
 
+RED='\e[0;31m'
+GREEN='\e[0;32m'
+RESET='\e[0m'
+
 # Set Environment Variables (default names) for the Resource Group, Location and the Virtual Dev Machine Name
 AZ_RG="TMP-AZ-220-RG"
 
-RGName=$AZ_RG
+# Check if the user wants to override one or more of the default values
+OPTS=`getopt -n 'parse-options' -o hr: --long help,resource: -- "$@"`
+eval set -- "$OPTS"
 
-# create resource group
-az group delete --name $RGName
+#extract options and their arguments into variables
+while true ; do
+        case "$1" in
+                -h | --help    ) echo "usage: ./01-remove-az220-rg.azcli [-r <resource group>]"; exit 1 ;;
+                -r | --resource) AZ_RG="$2"; shift 2 ;;
+                --             ) shift; break ;;
+                *              ) break;;
+        esac
+done
+
+echo -e "${GREEN}This script might run for a few minutes${RESET}"
+
+# Remove the Azure Resource Group if it exists
+if [ $(az group exists -n $AZ_RG) = true ]
+then
+    echo -e "${GREEN}Deleting the existing Azure Resource Group: $RGName${RESET}"
+    az group delete -n $AZ_RG -y
+fi
