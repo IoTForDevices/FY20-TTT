@@ -41,3 +41,10 @@ RGName=$AZ_RG
 
 ../00-Prerequisites/01-create-iothub.azcli -i $INITIALS -l $Location -b $AZ_HUB_NAME -r $AZ_RG  
 
+# create a device ID using Symmetric Key Auth and Connect it to the IoT Hub
+echo -e "${GREEN}Creating an IoT Hub Device Identity on $IoTHubName with id SimulatedThermostat${RESET}"
+az iot hub device-identity create --hub-name $IoTHubName --device-id SimulatedThermostat -o tsv
+
+# retrieve the Connection String for the IoT Device
+echo -e "${GREEN}Retrieving the Connection String for your IoT Hub Device Identity${RESET}"
+az iot hub device-identity show-connection-string --hub-name $IoTHubName --device-id SimulatedThermostat
